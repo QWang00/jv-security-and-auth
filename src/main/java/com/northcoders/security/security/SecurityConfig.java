@@ -19,7 +19,7 @@ public class SecurityConfig {
             auth.requestMatchers("api/v1/open/greeting").permitAll();
 
         })
-                .formLogin(withDefaults());
+                .oauth2Login(withDefaults());
         return http.build();
     }
 }
